@@ -1,0 +1,84 @@
+
+### Auth Login
+
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  "email": "admin@gmail.com",
+  "password": "test1234"
+}
+
+### Auth access
+
+GET http://localhost:3000/auth/profile
+Content-Type: application/json
+Authorization: Bearer "eyJhbGciOiJIUzI1NiJ9.YWRtaW5AZ21haWwuY29t.8TN4RKVN7IuxcQ98XurJ77_SKXg49OWxxvHUaINUYDs"
+
+### User =====================
+
+GET http://localhost:3000/users
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.YWRtaW5AZ21haWwuY29t.8TN4RKVN7IuxcQ98XurJ77_SKXg49OWxxvHUaINUYDs"
+
+###
+
+GET http://localhost:3000/users/14
+
+###
+
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+  "email": "employee1@gmail.com",
+  "password": "test1234",
+  "role": "employee"
+}
+
+###
+
+PUT http://localhost:3000/users/1
+Content-Type: application/json
+
+{
+  "password": "5555"
+}
+
+###
+
+DELETE http://localhost:3000/users/43
+Content-Type: application/json
+Authorization: Bearer "eyJhbGciOiJIUzI1NiJ9.YWRtaW5AZ21haWwuY29t.8TN4RKVN7IuxcQ98XurJ77_SKXg49OWxxvHUaINUYDs"
+
+### Geolocation =====
+
+GET http://localhost:3000/geolocation
+
+###
+
+GET http://localhost:3000/geolocation/2
+
+###
+
+POST http://localhost:3000/geolocation
+Content-Type: application/json
+
+{
+  "latitude": "49.968694499999996",
+  "longitude": "36.2088506",
+  "user": "3"
+}
+
+###
+
+PUT http://localhost:3000/geolocation/2
+Content-Type: application/json
+
+{
+  "longitude": "37.2088506"
+}
+
+###
+
+DELETE http://localhost:3000/geolocation/4
